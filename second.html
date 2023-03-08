@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="second.css">
+</head>
+<body>
+    <div class="main">
+
+    </div>
+    <div class="wrap_b">    
+        <div class="lo">
+        <h1><a href="#" class="logo"><span class="hidden">NAVER</span></a></h1>
+        </div>
+        <form name="form1">
+            <label for="" >아이디</label><br>
+            <input type="text" name="id" placeholder="@naver.com" maxlength="20"  id="id" onblur="blurIt('fir')">
+            <p class="dan" id="fir">필수 정보입니다</p>
+            <label for="">비밀번호</label><br>
+            <input type="password" name="pw" id="pw" onblur="blurIt('sec')">
+            <p class="dan" id="sec">필수 정보입니다</p>
+            <label for="">비밀번호 재확인</label><br>
+            <input type="password" name="pwchk" id="pwchk" onblur="blurIt('thi')">
+            <p class="dan" id="thi">필수 정보입니다</p>
+            <label for="">이름</label><br>
+            <input type="text" name="name" id="name" onblur="blurIt('fou')">
+            <p class="dan" id="fou">필수 정보입니다</p>
+            <label for="">생년월일</label><br>
+            <input type="text" maxlength="4" name="year" id="year" class="year" placeholder="년(4자)"> 
+            <select name="" id="mon" class="month">
+                <option value="" selected disabled>월</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                
+            </select>
+            <input type="text" maxlength="2" name="day" id="day" class="day" placeholder="일">
+            <p class="dan">태어난 년도 4자리를 정확하게 입력하세요.</p>
+            <label for="">성별</label><br>
+            <select name="" id="gender">
+                <option value="" selected disabled>성별</option>
+                <option value="male">남자</option>
+                <option value="female">여자</option>
+                <option value="not">선택 안함</option>
+            </select>
+            <label for="">본인 확인 이메일<span>(선택)</span></label><br>
+            <input type="text" name="email" id="email" placeholder="선택입력">
+            <label for="">휴대전화</label><br>
+            <select name="" id="lo" class="nat">
+                <option value="ko" selected>대한민국 +82</option>
+                <option value="us">미국/캐나다 +1</option>
+                <option value="ga">가나 +233</option>
+            </select>
+            <input type="number" placeholder="전화번호 입력" class="phone">
+            <button class="confirm" onclick="rannum()" type="button">인증번호 받기</button>
+            <input type="number" placeholder="인증번호 입력하세요" name="chkconfirm" id="tochk">
+            <p class="dan">필수 정보입니다</p>
+            <button class="sign" type="button" onclick="inputChk()">가입하기</button>
+        </form>
+    </div>
+    <footer>
+        <div class="wrap_b" >
+            <ul>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#"><span>개인정보처리방침</span></a></li>
+                <li><a href="#">책임의 한계와 법적고지</a></li>
+                <li><a href="#">회원정보 고객센터</a></li>
+            </ul>
+            <ul>
+                <li><a href="#" class="m_logo">Naver<span class="hidden">naver</span></a></li>
+                <li><a href="#">copylight</a></li>
+                <li><a href="#">Naver Corp.</a></li>
+                <li><a href="#">All Rights Reserved</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="./sign.js"></script>
+</body>
+</html>
