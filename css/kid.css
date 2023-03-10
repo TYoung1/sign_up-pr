@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+p{
+    margin: 5px 0;
+    line-height: 16px;
+    font-size: 14px;
+    display: block;
+    color: #8e8e8e;
+}
+h4{
+    padding-bottom: 4px;
+    font-size: 18px;
+    font-weight: 800;
+
+}
+h5{
+    color: #333;
+    font-size: 14px;
+}
+button{
+    cursor: pointer;
+}
+nav{
+    background: #03c75a;
+    height: 45px;
+    color: #fff;
+}
+.wrap{
+    width: 460px;
+    margin: 0 auto;
+    line-height: 45px;
+}
+h2{
+    font-weight: bold;
+    font-size: 16px;
+}
+nav span{
+    font-weight: normal;
+}
+.main{
+    margin-top: 20px;
+}
+.explain{
+    margin: 10px 0;
+    padding: 5px;
+    border: 1px solid #e5e5e5;
+    background-color: #f5f6f7;
+}
+.first,.second,.third{
+    margin-bottom: 10px;
+}
+.last_a{
+    font-size: 12px;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+#see{
+    width: 30%;
+    color: #03c75a;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    height: 40px;
+}
+.check{
+    width: 100%;
+    background: #03c75a;
+    padding: 14px 0 15px;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    
+}
+.img1{
+    display: block;
+    width: 100%;
+    background: url(https://static.nid.naver.com/images/ui/join/pc_kid_person_01.png);
+    height: 320px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.img2{
+    display: block;
+    width: 100%;
+    background: url(https://static.nid.naver.com/images/ui/join/pc_kid_person_02.png);
+    height: 230px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.img3{
+    display: block;
+    width: 100%;
+    background: url(https://static.nid.naver.com/images/ui/join/pc_kid_person_03.png);
+    height: 320px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.img4{
+    display: block;
+    width: 100%;
+    height: 270px;
+    background: url(https://static.nid.naver.com/images/ui/join/pc_kid_person_04.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+

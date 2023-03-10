@@ -33,7 +33,7 @@ button{
     text-align: center;
 }
 .logo{
-    background: url(./n_l.png);
+    background: url(../image/n_l.png);
     display: block;
     margin: 0 auto;
     width: 240px;

@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>네이버:회원가입</title>
-    <link rel="shortcut icon" href="./clone.ico" type="image/x-icon">
-    <link rel="stylesheet" href="fc.css">
+    <link rel="shortcut icon" href="./image/clone.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/fc.css">
 </head>
 <body>
     <div class="top">
@@ -156,7 +156,7 @@
                         <label class="must" style="position: relative;">
                             <input type="checkbox" name="chk" id="" class="pil" onclick="checkSelectAll()">
                             <p>개인정보 수집 및 이용 동의<span>(필수)</span></p> 
-                            <button class="k_g">어린이용 안내</button>  
+                            <button class="k_g" onclick="window.open('./forkid.html')">어린이용 안내</button>  
                         </label>
                         <div class="scroll">
                             개인정보보호법에 따라 네이버에 회원가입 신청하시는 분께 수집하는 개인정보의 항목, 개인정보의 수집 및 이용목적, 개인정보의 보유 및 이용기간, 동의 거부권 및 동의 거부 시 불이익에 관한 사항을 안내 드리오니 자세히 읽은 후 동의하여 주시기 바랍니다.
@@ -310,7 +310,7 @@
                     </label>
                     <p class="warn" id="warning">네이버 이용약관과 개인정보 수집 및 이용에 대한 안내 모두 동의해주세요.</p>
                         <div class="btn_b">
-                            <button class="no" onclick="location.href='naver.com'">취소</button>
+                            <button class="no" onclick="location.href='https://www.naver.com/'">취소</button>
                             <button class="ok" onclick="next()">확인</button>
                         </div>
                         <div class="pro_b" style="text-align: center;">
@@ -338,6 +338,6 @@
             </div>
         </div>
     </div>
-    <script src="lang.js"></script>
+    <script src="./function/lang.js"></script>
 </body>
 </html>
