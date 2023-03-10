@@ -1,4 +1,5 @@
 function changeKo(){
+  //  select value가 en일경우 영문페이지로 이동
     let lang = document.getElementById("lang").value;
     if(lang=="en"){
         location.href="firsteng.html";
@@ -6,6 +7,7 @@ function changeKo(){
 
 }
 function changeEn(){
+  // select value가 ko일경우 한글페이지로 이동
     let lang = document.getElementById("lang").value;
     if(lang=="ko"){
         location.href="firstko.html";
@@ -41,11 +43,13 @@ function check(selectAll){
     }
   }
   function next(){
+    // 필수칸 체크요소 가져오기
     let must = document.querySelectorAll('input[class="pil"]:checked');
-    
+    // 필수 칸은 2개이기떄문에 가져온 체크된필수칸의 개수와 비교 
     if(must.length == 2){
         location.href="second.html";
     }
+    // 아닐시 체크하라고 안내글 표시
     else{
         document.getElementById("warning").style.display="block";
     }
