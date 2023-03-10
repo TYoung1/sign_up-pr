@@ -31,11 +31,11 @@ function inputChk(){
     let nat = document.getElementById("lo").value;
     let toc = document.getElementById("tochk").value;
     if(!idreg.test(id)){
-        document.getElementById("fir").innerText="아이디는 영소대문자,숫자, _ , - , !만사용가능합니다";
+        document.getElementById("fir").innerText="아이디는 영소대문자1개이상,숫자1개이상, _ , - , !1개이상(8글자이상)으로 생성하여주세요";
         document.getElementById("fir").style.display="block";
     }else{
         if(!pwreg.test(pw)){
-            document.getElementById("sec").innerText="비밀번호는 영소대문자,숫자, _ , - , !만사용가능합니다";
+            document.getElementById("sec").innerText="비밀번호는 영소대문자1개이상,숫자1개이상, _ , - , !1개이상(8글자이상)으로 생성하여주세요";
             document.getElementById("sec").style.display="block";
         }else{
         if(pw!=pwchk){

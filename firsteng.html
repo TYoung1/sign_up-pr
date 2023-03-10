@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="first.css">
+    <link rel="stylesheet" href="fc.css">
 </head>
 <body>
     <div class="top">
         <div class="wrap_t">
             <div class="op">
-                <select>
+                <select id="lang" onchange="changeEn()">
                     <option value="ko">한국어</option>
-                    <option value="en">English</option>
+                    <option value="en" selected>English</option>
                     <option value="ch">中文</option>
                     <option value="ja">日本語</option>
                 </select>
@@ -24,14 +24,17 @@
     <div class="main">
         <div class="wrap_b">
             <div class="allchk">
-            <p>Agree to all of the following terms and conditions of NAVER: Terms of Service; Privacy Policy; the Terms of Use of Location-based Services (optional); Receive promotional information (optional).</p>
-            </div>
-            <div class="container">
+                <label >
+                    <span><input type="checkbox" name="all" class="all" onclick="check(this)"></span>
+                    <p class="all_p">Agree to all of the following terms and conditions of NAVER: Terms of Service; Privacy Policy; the Terms of Use of Location-based Services (optional); Receive promotional information (optional).</p>
+                </label>
                 <div class="subchk">
-                    <p>Terms of Service<span>(Required)</span></p>
-                </div>  
-                <div class="scroll">
-                    Welcome to Naver!
+                    <label class="must">
+                        <input type="checkbox" name="chk" id="" class="pil" onclick="checkSelectAll()">
+                        <p>Terms of Service<span>(Required)</span></p>
+                    </label>
+                    <div class="scroll">
+                        Welcome to Naver!
 Thank you for using our services and products (“Naver Service(s)” or “Service(s)”). These NAVER Terms of Service define the relationship between Naver Corporation (“Naver”), which provides Naver Services, and members of Naver (“Member(s)”) or non-members, who use such Services, with regard to the use of various Naver Services, and contain useful information which may help you use Naver Services.
 
 By using our Services, you are deemed to have been notified of NAVER Terms of Service, and by signing up as a Member, you are deemed to agree to be bound by these NAVER Terms of Service and additional relevant operation policies. Please take a moment to read these NAVER Terms of Service carefully.
@@ -146,12 +149,13 @@ This English version of the NAVER Terms of Service is a translation based on the
 Date of announcement: March 30, 2018
 Effective date: May 1, 2018
 If you have any inquiries about Naver Services, please contact Customer Center (contact number: 1588-3820/ open weekdays 09:00~18:00).
-                </div>  
-                <div class="subchk">
-                    <p>Privacy Policy<span>(Required)</span></p> 
-                </div>  
-                <div class="scroll">
-                    1. Collected Personal Information
+                    </div>
+                    <label class="must" style="position: relative;">
+                        <input type="checkbox" name="chk" id="" class="pil" onclick="checkSelectAll()">
+                        <p>Privacy Policy<span>(Required)</span></p> 
+                    </label>
+                    <div class="scroll">
+                        1. Collected Personal Information
 Users may now access the majority of NAVER services available to members, such as information searches or viewing news articles, without the need to sign up for membership. Where a user signs up with NAVER to access personalized or membership services, including email, calendar, café, or blog services, only a minimal amount of personal information required for service use is collected.
 
 The personal information collected by NAVER at the time of signing up for membership is provided below.
@@ -218,108 +222,114 @@ Note that NAVER separately stores and manages the personal information of users 
 
 
 Check out Privacy Policy for more information
-                </div> 
-                <div class="subchk">
-                    <p>Consent to the Terms of Use of Location-based Services<span class="cho">(Optional)</span></p>
-                </div>  
-                <div class="scroll">
-                    If you agree to the Terms of Use of location-based services, you may use NAVER’s location-based services, including receiving promotional information using your location.
+                    </div>
+                    <label class="choice">
+                        <input type="checkbox" name="chk" id="" class="sun" onclick="checkSelectAll()">
+                        <p>Consent to the Terms of Use of Location-based Services<span class="cho">(Optional)</span></p>  
+                    </label>
+                    <div class="scroll">
+                        If you agree to the Terms of Use of location-based services, you may use NAVER’s location-based services, including receiving promotional information using your location.
 
-Article 1 (Purpose)
-The purpose of this agreement is to stipulate the rights, obligations and responsibilities, and other necessary matters between NAVER Corporation (hereinafter referred to as the “Company”) and the subject of personal location information in terms of the location-based services provided by the Company.
-Article 2 (Working Rules Other Than the Terms of Use)
-Matters not specified herein shall comply with the Act on the Protection and Use of Location Information, Personal Information Protection Act, Act on Promotion of Information and Communications Network Utilization and Information Protection, Framework Act on Telecommunications, Telecommunications Business Act and other relevant regulations, terms of use and privacy policy of the Company, and other guidelines as set forth by the Company.
-Article 3 (Description and Pricing of Services)
-① The Company, upon receiving location information from the location information provider, shall provide the following location-based services:
-
-1. GeoTagging service: the location information of a subject of personal location information or mobile device included in a post or content saved by the user is stored with the post. The stored location information may be preserved without additional usage, or may be used to provide features that categorizes or searches for content based on location;
-2. Search result and content using location information: where there is a request for information search, or where the location information of the subject of personal location information or mobile device is provided, such location information is used to provide search result, result of nearby location search (popular restaurants, nearby businesses, means of transportation, etc.), and translation result;
-3. Advertisement using user location: in the process of using search result or other services, the location of the subject of personal location information or mobile device is used to present advertising materials;
-4. Protection of users and prevention of abuse: the location of the subject of personal location information or mobile device is used to prohibit any unauthorized individual from attempting to use services abnormally, etc.;
-5. Provision of convenience services such as directions: optimal routes including traffic information, directions, etc. are offered on a map, and locating nearby facilities, news and weather information, emergency rescue service, automatic address completion and other convenience services shall be provided.
-② Location-based services under paragraph (1) shall be offered free of charge.
-Article 4 (Rights Held by Subjects of Personal Location Information)
-① The subject of personal location information may defer their consent for part of the scope of the collection of personal location information and the terms of use, or the usage and purpose of personal location information, scope of the recipient of personal location information, and part of location-based services.
-② Any subject of personal location information may fully or partially withdraw their consent to the collection, use and provision of personal location information.
-③ Any subject of personal location information may request, at any time, a temporary suspension on the collection, use and provision of personal location information. In such case, the Company shall not refuse such request and shall take technical measures accordingly.
-④ Any subject of personal location information may request the Company to permit them to inspect any of the following data or to give notice of any of the following data, and may request the Company to correct an error found in the concerned data. In such case, the Company shall not reject such request without good cause:
-
-1. Data verifying the collection, use and provision of personal location information which relates to the subject of personal location information;
-2. The ground on which the personal location information of the subject of personal location information was provided to a third party pursuant to the provisions of the Act on the Protection and Use of Location Information or other Acts, and the relevant details.
-⑤ Where the subject of personal location information fully or partially withdraws their consent, the Company shall, without delay, destroy the collected personal location information and the data verifying the collection, use and provision of location information. Notwithstanding the foregoing, where the subject of personal location information partially withdraws their consent, such destruction of data is limited to the personal location information and the data verifying the use and provision of location information for the part withdrawn.
-⑥ In order to ensure the subject of personal location information exercises their rights under paragraph (1) or paragraph (4), the subject of personal location information may use the contact information under Article 13 of this agreement to make requests to the Company.
-Article 5 (Rights Held by Legal Representatives)
-① Where the Company intends to collect, use or provide personal location information from children under 14 years of age, the Company shall obtain the consent of the child under 14 years of age and their legal representative.
-② Where legal representatives provide their consent to the collection, use and provision of personal location information of children under 14 years of age, they may exercise the right to defer consent, right to withdraw and suspend consent, and right to request inspection and notification.
-Article 6 (Grounds for and Period of Retaining Data Verifying the Usage and Provision of Location Information)
-In accordance with Article 16 (2) of the Act on the Protection and Use of Location Information, the Company shall automatically record data verifying the collection, use, and provision of location information in a location information system, and preserve the data for 6 months or longer.
-Article 7 (Changes to and Termination of Services)
-① Where it becomes impossible for the Company to maintain its services due to various circumstances of the Company such as policy changes of the location-based service provider or legal obstacles, the Company may restrict, change or terminate the service fully or partially.
-② When the service is terminated pursuant to paragraph (1), the Company shall make an announcement on the internet or notify the subject of personal location information prior to such termination.
-Article 8 (Immediate Notification when Providing Third Parties with Personal Location Information)
-① The Company shall not provide the personal location information of the subject of personal location information to a third party without the consent of the relevant subject of personal location information, and in the case of providing services offered by a third party, the designated recipient of the personal location information and the purpose of provision shall be notified to the subject of personal location information in advance, and shall obtain his/her consent.
-② In case the Company provides personal location information to a third party designated by the subject of personal location information, the Company shall immediately notify, on each occasion, the subject of personal location information, of the designated recipient of such information, the date, time, and purpose of such provision via the communication terminal device from which the personal location information was collected.
-③ Notwithstanding the forgoing, in the case of the following, the subject of personal location information shall notify via the predesignated communication terminal device or e-mail address.
-
-1. In case the communication terminal device, for which the personal location information was collected, does not include functions to receive text, voice or video;
-2. In case the subject of personal location information has requested in advance to notify with a communication terminal device or e-mail address other than the communication terminal device that collected the personal location information.
-Article 9 (Rights Held by the Legal Guardian of Children of Eight Years Old or Younger, etc.)
-① Where the legal guardian of any of the following persons (hereinafter referred to as "child of eight years old or younger, etc.") gives consent to the use or provision of personal location information regarding the child of eight years old or younger, etc., for the protection of the child's health or safety, the Company shall deem that the child, etc. themselves consent thereto:
-
-1. A child of eight years old or younger;
-2. A person under adult guardianship;
-3. A person with a mental disorder defined in Article 2 (2) 2 of the Act on Welfare of Persons with Disabilities, classified as a person with a severe disability defined in subparagraph 2 of Article 2 of the Act on the Employment Promotion and Vocational Rehabilitation of Persons with Disabilities (limited to those registered as disabled persons under Article 32 of the Act on Welfare of Persons with Disabilities).
-② For the protection of the health or safety of a child of eight years old or younger, etc., the legal guardian who intends to consent to the use or provision of personal location information must submit a written consent to the Company along with a document proving that he/she is the legal guardian.
-③ The legal guardian can exercise all of the rights of the subject of personal location information if he/she agrees to the use or provision of personal location information for a child of eight years old or younger, etc.
-Article 10 (Purpose of Retention and Period of Use of Personal Location Information)
-① The Company shall retain and use personal location information for the minimum period necessary to provide location-based services.
-② The Company shall destroy personal location information without delay after one-time or temporary use from most location-based services. Provided, That when a user posts or stores personal location information along with posts and content on the Company’s service, such as in the ‘GeoTagging’ service, the personal location information shall be stored together during the retention period of the posts and content.
-Article 11 (Compensation for Damage)
-Where a subject of personal location information suffers damage because the Company has violated Articles 15 through 26, he/she may claim damages against the Company. In such cases, the Company shall not be exempt from liabilities unless it proves that there was no intention or negligence on its part.
-Article 12 (Mediation in Disputes)
-① Where the parties to a dispute related to location information fail to reach an agreement or it is impossible to reach an agreement, the Company may file a petition for adjudication with the Korea Communications Commission.
-② Where the parties to a dispute related to location information fail to reach an agreement or it is impossible to reach an agreement, the Company or the subject of personal location information may file a petition for mediation with the Personal Information Dispute Mediation Committee established under the Personal Information Protection Act.
-Article 13 (Contact and Person Responsible for Location Information)
-① Name, address and contact information of the Company are as follows:
-
-- Name of Company: NAVER Corporation
-- Address: NAVER 1784, 95, Jeongjail-ro, Bundang-gu, Seongnam-si, Gyeonggi-do, Republic of Korea (postal code: 13561)
-- Telephone number: 1588-3820
-② The company is striving to protect the rights of the subject of personal location information, including the handling of complaints that users have in the process of using the service, by designating a person responsible for managing location information.
-
-- Person responsible for managing location information: David Lee, CPO/DPO
-- E-mail : Contact us
-Addendum
-Effective date of Article 1
-The previous terms and conditions that were in effect from April 27, 2022 will be replaced by these terms and conditions, and such terms will be applied from MAY 18, 2022.
+                        Article 1 (Purpose)
+                        The purpose of this agreement is to stipulate the rights, obligations and responsibilities, and other necessary matters between NAVER Corporation (hereinafter referred to as the “Company”) and the subject of personal location information in terms of the location-based services provided by the Company.
+                        Article 2 (Working Rules Other Than the Terms of Use)
+                        Matters not specified herein shall comply with the Act on the Protection and Use of Location Information, Personal Information Protection Act, Act on Promotion of Information and Communications Network Utilization and Information Protection, Framework Act on Telecommunications, Telecommunications Business Act and other relevant regulations, terms of use and privacy policy of the Company, and other guidelines as set forth by the Company.
+                        Article 3 (Description and Pricing of Services)
+                        ① The Company, upon receiving location information from the location information provider, shall provide the following location-based services:
+                        
+                        1. GeoTagging service: the location information of a subject of personal location information or mobile device included in a post or content saved by the user is stored with the post. The stored location information may be preserved without additional usage, or may be used to provide features that categorizes or searches for content based on location;
+                        2. Search result and content using location information: where there is a request for information search, or where the location information of the subject of personal location information or mobile device is provided, such location information is used to provide search result, result of nearby location search (popular restaurants, nearby businesses, means of transportation, etc.), and translation result;
+                        3. Advertisement using user location: in the process of using search result or other services, the location of the subject of personal location information or mobile device is used to present advertising materials;
+                        4. Protection of users and prevention of abuse: the location of the subject of personal location information or mobile device is used to prohibit any unauthorized individual from attempting to use services abnormally, etc.;
+                        5. Provision of convenience services such as directions: optimal routes including traffic information, directions, etc. are offered on a map, and locating nearby facilities, news and weather information, emergency rescue service, automatic address completion and other convenience services shall be provided.
+                        ② Location-based services under paragraph (1) shall be offered free of charge.
+                        Article 4 (Rights Held by Subjects of Personal Location Information)
+                        ① The subject of personal location information may defer their consent for part of the scope of the collection of personal location information and the terms of use, or the usage and purpose of personal location information, scope of the recipient of personal location information, and part of location-based services.
+                        ② Any subject of personal location information may fully or partially withdraw their consent to the collection, use and provision of personal location information.
+                        ③ Any subject of personal location information may request, at any time, a temporary suspension on the collection, use and provision of personal location information. In such case, the Company shall not refuse such request and shall take technical measures accordingly.
+                        ④ Any subject of personal location information may request the Company to permit them to inspect any of the following data or to give notice of any of the following data, and may request the Company to correct an error found in the concerned data. In such case, the Company shall not reject such request without good cause:
+                        
+                        1. Data verifying the collection, use and provision of personal location information which relates to the subject of personal location information;
+                        2. The ground on which the personal location information of the subject of personal location information was provided to a third party pursuant to the provisions of the Act on the Protection and Use of Location Information or other Acts, and the relevant details.
+                        ⑤ Where the subject of personal location information fully or partially withdraws their consent, the Company shall, without delay, destroy the collected personal location information and the data verifying the collection, use and provision of location information. Notwithstanding the foregoing, where the subject of personal location information partially withdraws their consent, such destruction of data is limited to the personal location information and the data verifying the use and provision of location information for the part withdrawn.
+                        ⑥ In order to ensure the subject of personal location information exercises their rights under paragraph (1) or paragraph (4), the subject of personal location information may use the contact information under Article 13 of this agreement to make requests to the Company.
+                        Article 5 (Rights Held by Legal Representatives)
+                        ① Where the Company intends to collect, use or provide personal location information from children under 14 years of age, the Company shall obtain the consent of the child under 14 years of age and their legal representative.
+                        ② Where legal representatives provide their consent to the collection, use and provision of personal location information of children under 14 years of age, they may exercise the right to defer consent, right to withdraw and suspend consent, and right to request inspection and notification.
+                        Article 6 (Grounds for and Period of Retaining Data Verifying the Usage and Provision of Location Information)
+                        In accordance with Article 16 (2) of the Act on the Protection and Use of Location Information, the Company shall automatically record data verifying the collection, use, and provision of location information in a location information system, and preserve the data for 6 months or longer.
+                        Article 7 (Changes to and Termination of Services)
+                        ① Where it becomes impossible for the Company to maintain its services due to various circumstances of the Company such as policy changes of the location-based service provider or legal obstacles, the Company may restrict, change or terminate the service fully or partially.
+                        ② When the service is terminated pursuant to paragraph (1), the Company shall make an announcement on the internet or notify the subject of personal location information prior to such termination.
+                        Article 8 (Immediate Notification when Providing Third Parties with Personal Location Information)
+                        ① The Company shall not provide the personal location information of the subject of personal location information to a third party without the consent of the relevant subject of personal location information, and in the case of providing services offered by a third party, the designated recipient of the personal location information and the purpose of provision shall be notified to the subject of personal location information in advance, and shall obtain his/her consent.
+                        ② In case the Company provides personal location information to a third party designated by the subject of personal location information, the Company shall immediately notify, on each occasion, the subject of personal location information, of the designated recipient of such information, the date, time, and purpose of such provision via the communication terminal device from which the personal location information was collected.
+                        ③ Notwithstanding the forgoing, in the case of the following, the subject of personal location information shall notify via the predesignated communication terminal device or e-mail address.
+                        
+                        1. In case the communication terminal device, for which the personal location information was collected, does not include functions to receive text, voice or video;
+                        2. In case the subject of personal location information has requested in advance to notify with a communication terminal device or e-mail address other than the communication terminal device that collected the personal location information.
+                        Article 9 (Rights Held by the Legal Guardian of Children of Eight Years Old or Younger, etc.)
+                        ① Where the legal guardian of any of the following persons (hereinafter referred to as "child of eight years old or younger, etc.") gives consent to the use or provision of personal location information regarding the child of eight years old or younger, etc., for the protection of the child's health or safety, the Company shall deem that the child, etc. themselves consent thereto:
+                        
+                        1. A child of eight years old or younger;
+                        2. A person under adult guardianship;
+                        3. A person with a mental disorder defined in Article 2 (2) 2 of the Act on Welfare of Persons with Disabilities, classified as a person with a severe disability defined in subparagraph 2 of Article 2 of the Act on the Employment Promotion and Vocational Rehabilitation of Persons with Disabilities (limited to those registered as disabled persons under Article 32 of the Act on Welfare of Persons with Disabilities).
+                        ② For the protection of the health or safety of a child of eight years old or younger, etc., the legal guardian who intends to consent to the use or provision of personal location information must submit a written consent to the Company along with a document proving that he/she is the legal guardian.
+                        ③ The legal guardian can exercise all of the rights of the subject of personal location information if he/she agrees to the use or provision of personal location information for a child of eight years old or younger, etc.
+                        Article 10 (Purpose of Retention and Period of Use of Personal Location Information)
+                        ① The Company shall retain and use personal location information for the minimum period necessary to provide location-based services.
+                        ② The Company shall destroy personal location information without delay after one-time or temporary use from most location-based services. Provided, That when a user posts or stores personal location information along with posts and content on the Company’s service, such as in the ‘GeoTagging’ service, the personal location information shall be stored together during the retention period of the posts and content.
+                        Article 11 (Compensation for Damage)
+                        Where a subject of personal location information suffers damage because the Company has violated Articles 15 through 26, he/she may claim damages against the Company. In such cases, the Company shall not be exempt from liabilities unless it proves that there was no intention or negligence on its part.
+                        Article 12 (Mediation in Disputes)
+                        ① Where the parties to a dispute related to location information fail to reach an agreement or it is impossible to reach an agreement, the Company may file a petition for adjudication with the Korea Communications Commission.
+                        ② Where the parties to a dispute related to location information fail to reach an agreement or it is impossible to reach an agreement, the Company or the subject of personal location information may file a petition for mediation with the Personal Information Dispute Mediation Committee established under the Personal Information Protection Act.
+                        Article 13 (Contact and Person Responsible for Location Information)
+                        ① Name, address and contact information of the Company are as follows:
+                        
+                        - Name of Company: NAVER Corporation
+                        - Address: NAVER 1784, 95, Jeongjail-ro, Bundang-gu, Seongnam-si, Gyeonggi-do, Republic of Korea (postal code: 13561)
+                        - Telephone number: 1588-3820
+                        ② The company is striving to protect the rights of the subject of personal location information, including the handling of complaints that users have in the process of using the service, by designating a person responsible for managing location information.
+                        
+                        - Person responsible for managing location information: David Lee, CPO/DPO
+                        - E-mail : Contact us
+                        Addendum
+                        Effective date of Article 1
+                        The previous terms and conditions that were in effect from April 27, 2022 will be replaced by these terms and conditions, and such terms will be applied from MAY 18, 2022.
+                    </div> 
+                    <label class="choice">
+                        <input type="checkbox" name="chk" id="" class="sun" onclick="checkSelectAll()">
+                        <p>Receive promotional information<span class="cho">(Optional)</span></p>
+                    </label>  
                 </div>
-                <div class="subchk">
-                    <p>Receive promotional information<span class="cho">(Optional)</span></p>
-                </div>
+                <label class="pro_b choice" >
+                    <p class="promo">You can receive various information such as events and benefits provided by NAVER via mobile phone (NAVER app notifications or text messages). Some services (those run under a separate membership system or used through additional subscriptions after joining NAVER) may require separate consent, in which case an additional notice will be provided and consent obtained.</p>  
+                </label>
+                <p class="warn" id="warning">In order to use our services, you must agree to Naver's Terms of Service & Privacy Policy.</p>
+                    <div class="btn_b">
+                        <button class="no" onclick="location.href='naver.com'">Cancel</button>
+                        <button class="ok" onclick="next()">Confirm</button>
+                    </div>
+                    <div class="pro_b" style="text-align: center;">
+                        <p>Need an account for your group? <a href="#">Sign up group account</a></p>
+                    </div>
             </div>
-            <div class="pro_b">
-                <p class="promo">You can receive various information such as events and benefits provided by NAVER via mobile phone (NAVER app notifications or text messages). Some services (those run under a separate membership system or used through additional subscriptions after joining NAVER) may require separate consent, in which case an additional notice will be provided and consent obtained.
-                </p>  
-                </div>
-                <div class="btn_b">
-                    <button class="no" onclick="location.href='naver.com'">Cancel</button>
-                    <button class="ok" onclick="location.href='second.html'">Confirm</button>
-                </div>
-                <div class="pro_b" style="text-align: center;">
-                    <p>Need an account for your group?  <a href="#">Sign up group account</a></p>
-                </div>
         </div>
-    </div>
-    <footer>
-        <div class="wrap_b" >
-            
-            <ul>
-                <li><a href="#" class="m_logo">Naver<span class="hidden">naver</span></a></li>
-                <li><a href="#">copylight</a></li>
-                <li><a href="#">Naver Corp.</a></li>
-                <li><a href="#">All Rights Reserved</a></li>
-            </ul>
-        </div>
-    </footer>
+        <footer>
+            <div class="wrap_b" >
+                
+                <ul>
+                    <li><a href="#" class="m_logo">Naver<span class="hidden">naver</span></a></li>
+                    <li><a href="#">copylight</a></li>
+                    <li><a href="#">Naver Corp.</a></li>
+                    <li><a href="#">All Rights Reserved</a></li>
+                </ul>
+            </div>
+        </footer>
+            </div>
+    
+    
+    <script src="./lang.js"></script>
 </body>
 </html>
